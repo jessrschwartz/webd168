@@ -1,15 +1,15 @@
-🌐 WEBD168 – Intermediate HTML & CSS - Spring 2026
+# 🌐 WEBD168 – Intermediate HTML & CSS
 
-Hi! I'm Jessica Schwartz. This repository contains my work for WEBD168: Intermediate HTML & CSS at San Diego Mesa College.
+A collection of coursework and projects by Jessica Schwartz from the Spring 2026 **WEBD168** course at San Diego Mesa College, focused on responsive design, accessibility, and intermediate HTML/CSS techniques.
 
-🛠️ What This Repo Includes
+## 💡 Focus Areas
+- Responsive layouts
+- External CSS
+- Navigation and page structure
+- Accessibility
+- Intermediate CSS styling and positioning
 
-This repository contains my coursework throughout the semester, including:
-
-Weekly assignments
-Practice exercises
-Layout and design projects
-
-Each folder reflects my progress as I learn and apply intermediate web development concepts.
-
-✨ Thanks for checking out my work!
+## 💻 Technologies
+- HTML
+- CSS
+- VS Code
