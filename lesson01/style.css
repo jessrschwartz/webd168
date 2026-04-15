@@ -1,0 +1,262 @@
+/* ==========================================================
+   Jessica Schwartz
+   Lesson 1 - Biography Page
+   Fake MySpace Profile / 2006 Goth-Emo Nostalgia
+   ========================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b0b0d;
+  color: #f3e8f0;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+a {
+  color: #d85fa1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#container {
+  width: 960px;
+  margin: 20px auto;
+  background: #111114;
+  border: 1px solid #7a4666;
+}
+
+#topbar {
+  background: linear-gradient(to bottom, #2d0f21, #1b0b15);
+  border-bottom: 2px solid #7a4666;
+}
+
+.topbar-inner {
+  padding: 18px;
+}
+
+.topbar-inner h1 {
+  margin: 0;
+  font-size: 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #ffd9ef;
+}
+
+.topbar-inner p {
+  margin: 6px 0 0;
+  color: #d6b4c8;
+}
+
+#content {
+  padding: 12px;
+}
+
+.columns {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.left-column {
+  width: 310px;
+}
+
+.right-column {
+  width: 610px;
+}
+
+.box {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+  background: #141418;
+  border: 1px solid #6d3a58;
+}
+
+.box th {
+  background: linear-gradient(to right, #5b1f3f, #381428);
+  color: #ffe8f5;
+  text-align: left;
+  padding: 7px 9px;
+  font-size: 13px;
+  border-bottom: 1px solid #6d3a58;
+}
+
+.box td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.profile-pic-area {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-pic-area img {
+  width: 170px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.profile-basic-info p {
+  margin: 5px 0;
+}
+
+.online-now {
+  color: #9ff59f;
+  font-weight: bold;
+}
+
+.online-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #39d939;
+  vertical-align: middle;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 6px;
+  padding: 4px 0;
+  border-bottom: 1px dotted #493241;
+}
+
+.music-box {
+  text-align: center;
+}
+
+.player {
+  margin: 10px auto;
+  padding: 8px 10px;
+  width: 78%;
+  border: 1px solid #b77599;
+  background: #0c0c0f;
+  letter-spacing: 8px;
+  font-size: 16px;
+}
+
+.small-text {
+  font-size: 11px;
+  color: #caa9bc;
+}
+
+.details-cell {
+  padding: 0;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details-table td {
+  padding: 7px 8px;
+  border: 1px solid #34252f;
+}
+
+.details-table .label {
+  width: 110px;
+  font-weight: bold;
+  color: #ffcce7;
+  background: #1d1720;
+}
+
+.sub-link {
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.view-link {
+  margin-top: 10px;
+}
+
+.about-me p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.friends-box td {
+  padding-bottom: 14px;
+}
+
+.friends-title,
+.top-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.top-eight {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.top-eight td {
+  width: 25%;
+  padding: 10px 6px;
+}
+
+.top-eight img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+}
+
+.top-eight p {
+  margin: 0;
+}
+
+.friends-comments h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #ffdcef;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.comment {
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #101015;
+  border: 1px solid #31242d;
+}
+
+.comment p {
+  margin: 0;
+}
+
+#footer {
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid #6d3a58;
+  color: #c8a7bb;
+  background: #0d0d10;
+}
+
+@media (max-width: 980px) {
+  #container {
+    width: 95%;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+}
