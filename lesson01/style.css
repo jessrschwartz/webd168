@@ -260,3 +260,29 @@ a:hover {
     width: 100%;
   }
 }
+
+@media (max-width: 600px) {
+
+  .top-eight {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .top-eight tr {
+    display: contents;
+  }
+
+  .top-eight td {
+    width: 45%;
+    margin: 5px;
+    display: block;
+    text-align: center;
+  }
+
+  .top-eight img {
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+  }
+}
