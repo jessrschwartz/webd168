@@ -249,6 +249,11 @@ a:hover {
 @media (max-width: 980px) {
   #container {
     width: 95%;
+    box-sizing: border-box;
+  }
+
+  #content {
+    box-sizing: border-box;
   }
 
   .columns {
@@ -258,51 +263,43 @@ a:hover {
   .left-column,
   .right-column {
     width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .friends-box {
-    overflow: hidden;
-  }
-
-  .top-eight,
-  .top-eight tbody {
-    display: block;
-    width: 100%;
-  }
-
-  .top-eight tr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .top-eight td {
-    display: block;
-    width: 50%;
     box-sizing: border-box;
-    padding: 8px 4px;
-    text-align: center;
+    min-width: 0;
   }
 
-  .top-eight img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 6px;
+  .box,
+  .box th,
+  .box td {
+    box-sizing: border-box;
+  }
+
+  .friends-box {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .friends-box td {
+    min-width: 0;
   }
 
   .friends-comments,
-  .comment {
-    width: 100%;
+  .comment,
+  .comment p {
+    max-width: 100%;
     box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+/* on mobile, let Top 8 scroll inside its box instead of blowing out the layout */
+@media (max-width: 600px) {
+  .friends-box {
+    display: block;
+    overflow-x: auto;
   }
 
-  .comment p {
-    overflow-wrap: break-word;
+  .top-eight {
+    min-width: 420px;
   }
 }
