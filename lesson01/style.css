@@ -262,27 +262,47 @@ a:hover {
 }
 
 @media (max-width: 600px) {
+  .friends-box {
+    overflow: hidden;
+  }
 
-  .top-eight {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .top-eight,
+  .top-eight tbody {
+    display: block;
+    width: 100%;
   }
 
   .top-eight tr {
-    display: contents;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 8px;
   }
 
   .top-eight td {
-    width: 45%;
-    margin: 5px;
     display: block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 8px 4px;
     text-align: center;
   }
 
   .top-eight img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 6px;
+  }
+
+  .friends-comments,
+  .comment {
     width: 100%;
-    height: auto;
-    max-width: 120px;
+    box-sizing: border-box;
+  }
+
+  .comment p {
+    overflow-wrap: break-word;
   }
 }
