@@ -1,0 +1,7 @@
+For the AI-enhanced version of my menu, I used AI to suggest small design improvements that would make the page feel more polished and user-friendly without changing too much of the original structure.
+
+One of my main changes was adding an introductory section at the top of the page. I decided to keep it short so it adds context without overwhelming the design. I also added consistent spacing and section styling using a shared class, which makes the layout feel more organized and easier to read.
+
+Another improvement was adding subtle visual enhancements in the CSS, like soft background panels for each section and a transition effect on links. I chose to keep these changes minimal so they still align with the original assignment requirements and don’t make the page feel overdesigned.
+
+Overall, AI helped me think more about user experience and visual hierarchy, but I made the final decisions about what to keep based on what fit the assignment and my personal style. Comparing my PDF follow-along version to the AI-enhanced version helped me better identify areas I can improve in future coding projects.

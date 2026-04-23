@@ -1,0 +1,139 @@
+/* Base font size for rem calculation */
+html {
+  font-size: 16px; /* 1rem = 16px, sets base font size for rem */
+}
+
+/* BODY */
+body {
+  font-family: Georgia, serif; /* Sets the body font to Georgia, serif */
+  font-size: 1rem; /* Base font size */
+  line-height: 1.75rem; /* Improves readability with spacing between lines */
+  margin: 0 15% 0; /* Centers content with left/right margins */
+
+  background-color: #d2dc9d; /* Sets page background to light green (PDF requirement) */
+  background-image: url("images/bullseye.png"); /* Adds repeating bullseye background pattern */
+  background-repeat: repeat; /* Tiles the image across the entire page */
+  background-position: center top; /* Centers the pattern horizontally at the top */
+}
+
+/* HEADER */
+header {
+  margin-top: 0; /* Removes default top margin */
+  padding: 3rem 1rem 2rem 1rem; /* Adds spacing inside the header */
+  text-align: center; /* Centers header text */
+
+  background-color: rgba(255,255,255,0.5); /* Adds semi-transparent white background */
+  background-image: url("images/purpledot.png"); /* Adds decorative purple dot pattern */
+  background-repeat: repeat-x; /* Repeats pattern horizontally across the header */
+}
+
+/* LINKS */
+a {
+  text-decoration: none; /* Removes underline from links */
+  color: #993399; /* Sets default link color to purple */
+}
+
+a:visited {
+  color: #937393; /* Changes visited links to muted purple */
+}
+
+a:hover,
+a:focus {
+  color: #c700f2; /* Brightens link color on hover/focus */
+  background-color: #ffffff; /* Adds white highlight behind link */
+}
+
+a:active {
+  color: #ff00ff; /* Changes link color while being clicked */
+  background-color: #ffffff; /* Keeps white background during click */
+}
+
+/* HEADINGS */
+h1 {
+  font: bold 1.5rem Georgia, serif; /* Sets font size and style for main heading */
+  text-shadow: 0.1rem 0.1rem 0.2rem gray; /* Adds subtle shadow effect */
+  color: #993399; /* Changes h1 text to purple */
+}
+
+h2 {
+  font-size: 1rem; /* Sets font size */
+  text-transform: uppercase; /* Makes text uppercase */
+  letter-spacing: 0.5rem; /* Adds spacing between letters */
+  text-align: center; /* Centers heading */
+  color: #cc6600; /* Changes h2 text to light brown */
+}
+
+/* DEFINITION TERMS */
+dt {
+  font-weight: bold; /* Makes term bold */
+}
+
+/* STRONG TEXT */
+strong {
+  font-style: italic; /* Italicizes strong text */
+}
+
+/* LIST STYLING */
+ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0; /* Removes margin */
+  padding: 0; /* Removes padding */
+}
+
+/* INFO SECTION */
+#info p {
+  font-style: italic; /* Makes paragraph text italic */
+}
+
+/* PRICE TEXT */
+.price {
+  font-family: Georgia, serif; /* Uses Georgia font */
+  font-style: italic; /* Italicizes price */
+}
+
+/* SMALL TEXT */
+p.warning,
+sup {
+  font-size: 0.875rem; /* Reduces font size */
+}
+
+/* LABEL TEXT */
+.label {
+  font-weight: bold; /* Makes label bold */
+  font-variant: small-caps; /* Applies small caps styling */
+  font-style: normal; /* Removes italics */
+}
+
+/* PARAGRAPH AFTER H2 */
+h2 + p {
+  text-align: center; /* Centers text */
+  font-style: italic; /* Italicizes paragraph */
+}
+
+/* AI Suggestion: Added a max width to main content so the updated version feels more polished and easier to read. I kept the layout simple and centered. */
+main {
+  max-width: 50rem; /* Limits line length for readability */
+  margin: 0 auto; /* Centers main content area */
+  padding: 2rem 0; /* Adds vertical breathing room */
+}
+
+/* AI Suggestion: Added a styled intro area to make the page feel more welcoming. I kept the colors soft so it still matches the original design. */
+.intro {
+  background-color: rgba(255, 255, 255, 0.6); /* Adds a soft translucent panel */
+  padding: 1rem; /* Adds inner spacing */
+  margin-bottom: 2rem; /* Separates intro from menu sections */
+  text-align: center; /* Centers intro text */
+}
+
+/* AI Suggestion: Added spacing between menu sections for a clearer visual hierarchy. I used rem units to match the assignment requirements. */
+.menu-section {
+  background-color: rgba(255, 255, 255, 0.6); /* Gives each section a soft card-like background */
+  padding: 1.5rem; /* Adds spacing inside each section */
+  margin-bottom: 2rem; /* Adds space between sections */
+  border-radius: 0.5rem; /* Softens the corners slightly */
+}
+
+/* AI Suggestion: Added a subtle transition so link hover feels smoother and more modern. I kept the effect small and easy to understand. */
+a {
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooths link hover/focus changes */
+}
