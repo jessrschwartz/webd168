@@ -1,0 +1,118 @@
+* {
+    /* Reset margin and padding for all elements */
+    margin: 0;
+    padding: 0;
+    /* Use border-box model for all elements so padding and border are included in the element's total width/height */
+    box-sizing: border-box;
+}
+
+/* Basic styles for the root element and body */
+html {
+    /* Set base font size to 100%, which is 16px by default */
+    font-size: 100%;
+    /* Line height of 1.5 for readability */
+    line-height: 1.5;
+}
+
+body {
+    /* Apply the Google Font "Source Sans Pro" to the entire body */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Main container for the content section */
+section {
+    display: flex; /* Use flexbox to create a two-column layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    max-width: 1200px; /* Set a maximum width for the layout */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 2rem; /* Add padding around the content */
+}
+
+/* Styles for the aside (sidebar) element */
+aside {
+    flex: 1 1 25%; /* Allow the aside to grow and shrink, with a base width of 25% */
+    background-color: #ededed; /* Light gray background for the sidebar */
+    padding: 1.25rem; /* Add padding inside the aside for spacing */
+    margin-left: 1rem; /* Add margin to the left of the aside for spacing from the article */
+    border-radius: 12px; /* Add rounded corners to the aside */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to the aside for visual separation */
+}
+
+aside p {
+    font-style: italic; /* Italicize the text in the aside for emphasis */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styles for the article element */
+article {
+    flex: 1 1 65%; /* Allow the article to grow and shrink, with a base width of 65% */
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%; /* Make images scale down to fit their container */
+    height: auto; /* Maintain the aspect ratio of images */
+    margin-right: 1rem; /* Add margin to the right of images for spacing from text */
+    margin-bottom: 1rem; /* Add margin to the bottom of images for spacing from text */
+    float: left; /* Float images to the left to allow text to wrap around them */
+    padding-right: 1rem; /* Add padding to the right of images for spacing from text */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem; /* Set the font size of the main heading */
+    margin-bottom: 0.5rem; /* Reduce spacing below the heading for better alignment */
+}
+
+h2 {
+    font-size: 2rem; /* Set the font size of subheadings */
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 1.5rem; /* Add margin below paragraphs for spacing */
+}
+
+/* Media Queries */
+
+/* Media query for screens smaller than or equal to 768px */
+@media (max-width: 768px) {
+
+    /* Stack the aside and article elements vertically on small screens */
+    section {
+        flex-direction: column; /* Change the flex direction to column for vertical stacking */
+    }
+
+    /* Move aside to the bottom by changing its order */
+    aside {
+        flex: 1 1 100%; /* Make the aside take up the full width */
+        margin-left: 0; /* Remove left margin for better spacing on small screens */
+        width: 80%; /* Set a specific width for the aside on small screens */
+        margin: 0 auto; /* Center the aside horizontally with margin */
+        padding: 1.5rem; /* Increase padding for better spacing on small screens */
+    }
+
+    /* Make the article take up the full width */
+    article {
+        flex: 1 1 100%; /* Make the article take up the full width */
+    }
+}
+
+/* Media query for screens smaller than or equal to 480px (extra small screens) */
+@media (max-width: 480px) {
+
+    /* Decrease the font size of the main heading for smaller screens */
+    h1 {
+        font-size: 2rem; /* Set a smaller font size for the main heading on extra small screens */
+    }
+
+    /* Decrease the font size of subheadings for smaller screens */
+    h2 {
+        font-size: 1.75rem; /* Set a smaller font size for subheadings on extra small screens */
+    }
+
+    /* Decrease the font size of paragraphs for smaller screens */
+    p {
+        font-size: 0.9rem; /* Set a smaller font size for paragraphs on extra small screens */
+    }
+}
