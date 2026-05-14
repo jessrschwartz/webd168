@@ -1,0 +1,222 @@
+/* ==========================================================
+   Jessica Schwartz
+   Bootstrap Bio Page
+   Fake MySpace Profile / 2006 Goth-Emo Nostalgia
+   ========================================================== */
+
+/* Modern CSS Feature #1: CSS variables */
+:root {
+  --page-bg: #0b0b0d;
+  --container-bg: #111114;
+  --box-bg: #141418;
+  --box-bg-dark: #101015;
+  --border-color: #7a4666;
+  --accent-color: #d85fa1;
+  --accent-light: #ffd9ef;
+  --text-color: #f3e8f0;
+  --muted-text: #d6b4c8;
+  --success-color: #9ff59f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--page-bg);
+  color: var(--text-color);
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.profile-wrapper {
+  max-width: 960px;
+  background: var(--container-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+}
+
+.topbar {
+  background: linear-gradient(to bottom, #2d0f21, #1b0b15);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* Modern CSS Feature #2: clamp() for responsive heading text */
+.topbar h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--accent-light);
+}
+
+.topbar p {
+  margin: 6px 0 0;
+  color: var(--muted-text);
+}
+
+/* Modern CSS Feature #3: :is() selector to group heading styles */
+:is(.card-header, .friends-comments h2) {
+  color: #ffe8f5;
+  font-weight: bold;
+}
+
+.profile-box {
+  background: var(--box-bg);
+  border: 1px solid #6d3a58;
+  border-radius: 0;
+  color: var(--text-color);
+}
+
+.profile-box .card-header {
+  background: linear-gradient(to right, #5b1f3f, #381428);
+  border-bottom: 1px solid #6d3a58;
+  border-radius: 0;
+  padding: 7px 9px;
+  font-size: 13px;
+}
+
+.profile-box .card-body {
+  padding: 10px;
+}
+
+.profile-pic {
+  width: 170px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.profile-basic-info p {
+  margin: 5px 0;
+}
+
+.online-now {
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.online-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #39d939;
+  vertical-align: middle;
+}
+
+.contact-list li {
+  margin-bottom: 6px;
+  padding: 4px 0;
+  border-bottom: 1px dotted #493241;
+}
+
+.player {
+  padding: 8px 10px;
+  width: 78%;
+  border: 1px solid #b77599;
+  background: #0c0c0f;
+  letter-spacing: 8px;
+  font-size: 16px;
+}
+
+.small-text {
+  font-size: 11px;
+  color: #caa9bc;
+}
+
+.details-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  border-bottom: 1px solid #34252f;
+}
+
+.details-row:last-child {
+  border-bottom: none;
+}
+
+.details-row span {
+  padding: 7px 8px;
+}
+
+.details-row .label {
+  font-weight: bold;
+  color: #ffcce7;
+  background: #1d1720;
+  border-right: 1px solid #34252f;
+}
+
+.sub-link {
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.about-me p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.friends-title,
+.top-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.friend-pic {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.top-eight p {
+  margin: 4px 0 0;
+}
+
+.friends-comments h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.comment {
+  padding: 8px;
+  margin-bottom: 8px;
+  background: var(--box-bg-dark);
+  border: 1px solid #31242d;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.footer {
+  border-top: 1px solid #6d3a58;
+  color: #c8a7bb;
+  background: #0d0d10;
+}
+
+@media (max-width: 576px) {
+  .profile-wrapper {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .details-row {
+    grid-template-columns: 1fr;
+  }
+
+  .details-row .label {
+    border-right: none;
+    border-bottom: 1px solid #34252f;
+  }
+}
