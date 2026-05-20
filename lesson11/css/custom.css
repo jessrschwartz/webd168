@@ -1,0 +1,426 @@
+/* ========================================
+   Custom Styles (Student Editable)
+   Jessica Schwartz - Lesson 10 Bootstrap Portfolio
+   ======================================== */
+
+/* Root variables keep my portfolio colours in one place */
+:root {
+  --color-bg-page: #0b0b14;
+  --color-bg-elevated: #141425;
+  --color-text-main: #eaeaf0;
+  --color-text-muted: #a1a1b5;
+  --color-primary: #a78bfa;
+  --color-primary-deep: #7c3aed;
+  --color-border-subtle: rgba(167, 139, 250, 0.28);
+  --color-glow-soft: rgba(167, 139, 250, 0.15);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.65);
+  --rainbow-glow: linear-gradient(135deg, #a78bfa, #38bdf8, #4ade80, #facc15, #f472b6, #a78bfa);
+}
+
+/* General Page Styles */
+html {
+  scroll-padding-top: 74px;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at top, var(--color-glow-soft), transparent 65%),
+    var(--color-bg-page);
+  color: var(--color-text-main);
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-primary);
+  color: #0b0b14;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Syne", system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3 {
+  color: #f4f1ff;
+}
+
+p {
+  color: var(--color-text-main);
+}
+
+.lead,
+.text-muted-custom {
+  color: var(--color-text-muted) !important;
+}
+
+/* Navigation */
+#mainNav {
+  background: rgba(11, 11, 20, 0.96);
+  border-bottom: 1px solid var(--color-border-subtle);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+}
+
+.nav-link {
+  border-radius: 999px;
+  margin-left: 0.25rem;
+  padding-left: 0.9rem !important;
+  padding-right: 0.9rem !important;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  background: var(--color-glow-soft);
+  color: #ffffff !important;
+}
+
+/* Header Section */
+header {
+  padding: 8rem 0 6rem;
+}
+
+.portfolio-hero {
+  position: relative;
+  overflow: hidden;
+  background: #0b0b14;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.portfolio-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-hero .lead {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Section Spacing */
+section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: rgba(255, 255, 255, 0.025);
+  border-top: 1px solid rgba(167, 139, 250, 0.12);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.12);
+}
+
+/* Cards / boxes */
+.portfolio-card,
+.portfolio-project {
+  position: relative;
+  border-radius: 1.1rem;
+  background:
+    radial-gradient(circle at top left, rgba(167, 139, 250, 0.08), transparent 60%),
+    var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem;
+}
+
+/* Soft rainbow outline only where it makes sense: project cards + the toolkit table */
+.portfolio-project::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--rainbow-glow);
+  opacity: 0.16;
+  filter: blur(9px);
+}
+
+.portfolio-project {
+  color: var(--color-text-main);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.portfolio-project:hover {
+  transform: translateY(-4px);
+  border-color: rgba(167, 139, 250, 0.6);
+}
+
+.profile-card {
+  position: sticky;
+  top: 95px;
+}
+
+.profile-card h2 {
+  font-size: 1.45rem;
+}
+
+/* Profile image styling */
+.profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tiny-blurb,
+.quick-details p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.quick-details {
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  padding: 1rem 0;
+}
+
+.quick-details p {
+  margin-bottom: 0.55rem;
+}
+
+.quick-details p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card p:last-child {
+  color: var(--color-text-muted);
+}
+
+.portrait-placeholder {
+  min-height: 180px;
+  border-radius: 0.9rem;
+  border: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, rgba(167, 139, 250, 0.16), transparent 55%),
+    var(--color-bg-page);
+}
+
+.portrait-placeholder i {
+  font-size: 4rem;
+  color: var(--color-primary);
+}
+
+.project-label {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  background: rgba(11, 11, 20, 0.65);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-accessibility {
+  border-color: rgba(74, 222, 128, 0.45);
+}
+
+.project-pacific {
+  border-color: rgba(250, 204, 21, 0.45);
+}
+
+.project-fortune {
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+/* Bootstrap buttons, Jess-coded */
+.btn-primary {
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-color: #0b0b14;
+  --bs-btn-hover-bg: var(--color-primary-deep);
+  --bs-btn-hover-border-color: var(--color-primary-deep);
+  --bs-btn-hover-color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 10px 26px rgba(167, 139, 250, 0.32);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: #0b0b14;
+}
+
+/* Table Caption Styling */
+caption {
+  caption-side: top;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Table Styling */
+.table-responsive {
+  padding: 1rem;
+}
+
+.toolkit-table-wrap {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.toolkit-table-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--rainbow-glow);
+  opacity: 0.22;
+  filter: blur(8px);
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.035);
+  --bs-table-hover-bg: rgba(167, 139, 250, 0.1);
+  --bs-table-border-color: rgba(167, 139, 250, 0.25);
+}
+
+.table-primary {
+  --bs-table-bg: rgba(167, 139, 250, 0.9);
+  --bs-table-color: #0b0b14;
+  --bs-table-border-color: rgba(167, 139, 250, 0.45);
+}
+
+.toolkit-table {
+  font-size: 0.9rem;
+}
+
+.rating {
+  color: #facc15;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.rating .bi-star {
+  color: rgba(250, 204, 21, 0.35);
+}
+
+/* Form Styling */
+.form-label,
+.col-form-label,
+.form-check-label {
+  color: #f4f1ff;
+  font-weight: 600;
+}
+
+.form-control,
+.form-select {
+  background-color: #0b0b14;
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-main);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(167, 139, 250, 0.22);
+}
+
+.form-control::placeholder {
+  color: #85859a;
+}
+
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Footer */
+footer {
+  background: #0b0b14;
+  border-top: 1px solid var(--color-border-subtle);
+  color: var(--color-text-muted);
+}
+
+/* Lesson 11 Image Hover Effect */
+/* This wrapper keeps the image contained while it scales on hover */
+.portrait-img-wrap {
+  max-width: 260px;
+  margin: 0 auto 1rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* This targets only one image for the transition + transform assignment */
+.fade-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* On hover, the image becomes fully visible and gently scales up */
+.fade-img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Accessibility: turns off transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+/* Section Spacing on Small Devices */
+@media (max-width: 991px) {
+  .profile-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 6rem 0 4rem;
+  }
+
+  section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .portfolio-card,
+  .portfolio-project {
+    padding: 1.35rem;
+  }
+}
